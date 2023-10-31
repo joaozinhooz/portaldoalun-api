@@ -1,10 +1,20 @@
 import { AppDataSource } from '@config/app_data_source'
 import { Aluno } from '@modules/models/aluno'
 
+type AddAlunoModels = {
+
+    nome: string
+    email: string
+    senha: string
+    // @Column()
+    //     area: Area
+    notas: number
+}
+
 export class AlunoServices {
-    async cadastrar (nome: string, turma: string, notas: number): Promise<void> {
+    async cadastrar (data: AddAlunoModels): Promise<void> {
         const alunoRepository = AppDataSource.getRepository(Aluno)
-        const aluno = alunoRepository.create({ nome, turma, notas })
+        const aluno = alunoRepository.create(data)
         await alunoRepository.save(aluno)
     }
 

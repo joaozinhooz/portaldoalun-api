@@ -8,8 +8,14 @@ export class Aluno {
     @Column()
         nome: string
 
+    @Column({ unique: true })
+        email: string
+
     @Column()
-        turma: string
+        senha: string
+
+    // @Column()
+    //     area: Area
 
     @Column()
         notas: number
