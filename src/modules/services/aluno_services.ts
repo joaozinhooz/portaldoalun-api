@@ -2,7 +2,6 @@ import { AppDataSource } from '@config/app_data_source'
 import { Aluno } from '@modules/models/aluno'
 
 type AddAlunoModels = {
-
     nome: string
     email: string
     senha: string

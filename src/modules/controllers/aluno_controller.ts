@@ -4,8 +4,7 @@ import { type Request, type Response } from 'express'
 export class AlunoController {
     async cadastrarAluno (request: Request, response: Response): Promise<Response> {
         const servicesAluno = new AlunoServices()
-        const { nome, turma, notas } = request.body
-        await servicesAluno.cadastrar(nome, turma, notas)
+        await servicesAluno.cadastrar(request.body)
         return response.json().status(201)
     }
 
