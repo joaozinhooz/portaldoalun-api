@@ -1,18 +1,21 @@
 import { AppDataSource } from '@config/app_data_source'
 import { Area } from '@modules/models/area'
+import { Professor } from '@modules/models/professor'
 
 type AddAreaModels = {
     nome: string
-    professor: string
+    professor: Professor
     materias: string
 }
 
 export class AreaServices {
+
     async cadastrar (data: AddAreaModels): Promise<void> {
-        const areaRepository = AppDataSource.getRepository(Area)
-        const area = areaRepository.create(data)
-        await areaRepository.save(area)
+        const alunoRepository = AppDataSource.getRepository(Area)
+        const aluno = alunoRepository.create(data)
+        await alunoRepository.save(aluno)
     }
+
 
     async listar (): Promise<Area[]> {
         const alunoRepository = AppDataSource.getRepository(Area)
