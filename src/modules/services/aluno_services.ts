@@ -6,7 +6,7 @@ type AddAlunoModels = {
     email: string
     senha: string
     // @Column()
-    //     area: Area
+    // area: Area
     notas: number
 }
 
