@@ -1,4 +1,5 @@
 import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm'
+import { Area } from './area'
 
 @Entity('professores')
 export class Professor {
@@ -13,4 +14,7 @@ export class Professor {
 
     @Column()
         senha: string
+
+    @Column({ array: true })
+        areas: Area[]
 }
