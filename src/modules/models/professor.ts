@@ -13,8 +13,4 @@ export class Professor {
 
     @Column()
         senha: string
-
-    @Column()
-        area: Area
-
 }

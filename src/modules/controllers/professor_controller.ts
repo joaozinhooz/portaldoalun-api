@@ -6,6 +6,5 @@ export class ProfessorController {
         const servicesProfessor = new ProfessorServices()
         await servicesProfessor.cadastrar(request.body)
         return response.json().status(201)
-    
     }
 }

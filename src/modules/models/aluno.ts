@@ -1,4 +1,5 @@
 import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm'
+import { Turma } from '../../../src/modules/models/turma'
 
 @Entity('alunos')
 export class Aluno {
@@ -14,8 +15,8 @@ export class Aluno {
     @Column()
         senha: string
 
-    // @Column()
-    //     area: Area
+    @Column()
+        turma: Turma
 
     @Column()
         notas: number

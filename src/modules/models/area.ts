@@ -1,6 +1,6 @@
 import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm'
 
-@Entity('area')
+@Entity('areas')
 export class Area {
     @PrimaryGeneratedColumn()
         id: number
@@ -8,10 +8,6 @@ export class Area {
     @Column()
         nome: string
 
-    @Column({ unique: true })
-        professor: Professor
-
     @Column()
         materias: string
-
 }
